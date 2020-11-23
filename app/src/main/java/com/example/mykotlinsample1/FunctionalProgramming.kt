@@ -59,4 +59,6 @@ var triple = fun (x: Int) : Int{
 
 var waffle = triple
 
-waffle(30)*/
+waffle(30)
+//Test to update github branch
+*/
