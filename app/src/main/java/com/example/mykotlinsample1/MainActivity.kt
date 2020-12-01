@@ -1,11 +1,9 @@
 package com.example.mykotlinsample1
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,70 +14,38 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                .setAction("Action", null).show()
         }
 
         println("This is my first Kotlin Program")
         println("My hobbies are listening music, cooking, interacting with good people, travelling and others")
 
-        var myPlaceholder = "Neeti"
+        val myPlaceholder = "Neeti"
         println(myPlaceholder)
 
-        var number = 20
+        val number = 20
         println(number)
 
-        //This is single line comment
-
-        /*
-        *
-        * This is multiline comment
-        * */
-
-        var myName :  String = "Neeti"
-        val pincode : Int = 209878          //CONSTANT value
-        var floatval : Float = 20.6f
-        var checkVal1 : String? = null      //OPTIONAL- to support null, have to put ? with variable tye, null means invalid
-        val checkVal2 : Int? = null
-
-        myName = "Gupta"
-       // pincode = 124352                  //can't reassigned value as it's val type
+        val checkVal1: String? = null
+        val checkVal2: Int? = null
+        val myName = "Gupta"
+        val pinCode = 124352
 
         println(myName)
         println(checkVal1)
         println(checkVal2)
-        println("Pincode: "+pincode)        //Concatenating values
+        println("pinCode: $pinCode")
+        print("Enter age:")
 
-        /*print("Enter age:")
-        var age = readLine()
-        print("Print Age: " + age)*/        //not working, need to check
+        val age = readLine()
+        print("Print Age: $age")
 
-       // var myIntValue : String = "678"
-       // var myIntValueAsString : Int
-       // myIntValueAsString = myIntValue.toInt()
-       // println(myIntValueAsString)
+        val myIntValue = "678"
+        val myIntValueAsString: Int = myIntValue.toInt()
+        println(myIntValueAsString)
 
-        var myIntValue: Float = 27.67f
-        var myDoubleValue: Double = myIntValue.toDouble()
+        val myIntValue1 = 27.67f
+        val myDoubleValue: Double = myIntValue1.toDouble()
         println(myDoubleValue)
-
-
-
-
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
     }
 }
